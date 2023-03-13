@@ -1,2 +1,3 @@
 # DSA
-Practicing DSA
+DSA Problem Solutions
+
