@@ -8,7 +8,7 @@ public class temp {
         int[] arr = new int[size];
 
         Arrays.fill(arr, 0);
-//        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));
 
         for(int i = 0; i < 256; i++){
             System.out.print((char)i + " ");
