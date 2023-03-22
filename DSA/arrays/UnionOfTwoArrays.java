@@ -9,7 +9,7 @@ CodeStudio -> https://www.codingninjas.com/codestudio/problems/sorted-array_6613
  */
 public class UnionOfTwoArrays {
     public static void main(String[] args) {
-        int[] arr1 = {1, 2, 3, 4};
+        int[] arr1 = {1, 1, 2, 3, 4};
         int[] arr2 = {1, 2, 3, 4};
         System.out.println(findUnion(arr1, arr2, arr1.length, arr2.length).toString());
     }
