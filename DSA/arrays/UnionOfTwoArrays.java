@@ -5,6 +5,7 @@ import java.util.ArrayList;
 /*
 Problem Link ->
 Gfg -> https://practice.geeksforgeeks.org/problems/union-of-two-sorted-arrays-1587115621/1
+CodeStudio -> https://www.codingninjas.com/codestudio/problems/sorted-array_6613259?leftPanelTab=1
  */
 public class UnionOfTwoArrays {
     public static void main(String[] args) {
