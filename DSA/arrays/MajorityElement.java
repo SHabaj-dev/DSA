@@ -4,7 +4,7 @@ package arrays;
 To solve this problem we need to understand the moose algo
 
 Steps ->
-1). Apply moose elemnt
+1). Apply moose element
 2). verify if the element is majority or not.
 
 Problem Link ->
@@ -34,12 +34,12 @@ public class MajorityElement {
                 count--;
             }
         }
-        for(int i = 0; i < size; i++){
-            if(a[i] == element){
+        for (int i = 0; i < size; i++) {
+            if (a[i] == element) {
                 count2++;
             }
         }
-        if(count2 > size / 2){
+        if (count2 > size / 2) {
             return element;
         }
         return -1;
