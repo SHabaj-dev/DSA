@@ -4,8 +4,8 @@ package arrays;
 Problem Links ->
 GFG -> https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/0
 Leetcode -> https://leetcode.com/problems/maximum-subarray/description/
-https://www.codingninjas.com/codestudio/problems/maximum-subarray-sum_630526
-Code Studio ->
+Code Studio ->https://www.codingninjas.com/codestudio/problems/maximum-subarray-sum_630526
+
  */
 public class KadaneAlgo {
     public static void main(String[] args) {
