@@ -27,7 +27,7 @@ public class AlternateNumbers {
             }
         }
 
-        for(int i = 0; i < a.length / 2; i++){
+        for (int i = 0; i < a.length / 2; i++) {
             a[2 * i] = posList.get(i);
             a[2 * i + 1] = negList.get(i);
         }
