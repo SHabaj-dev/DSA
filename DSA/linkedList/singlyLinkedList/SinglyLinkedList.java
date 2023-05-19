@@ -106,6 +106,47 @@ public class SinglyLinkedList {
 
         tail = current;
         tail.next = null;
+        size--;
+    }
+
+    public void deleteAtPosition(int position) {
+        int currentPos = 1;
+        Node currentNode = head;
+        if (position == 0) {
+            deleteFirst();
+        }
+        if (position == size) {
+            deleteLast();
+        }
+        while (position != currentPos) {
+            currentNode = currentNode.next;
+            currentPos++;
+        }
+
+        currentNode.next = currentNode.next.next;
+        size--;
+
+
+    }
+
+
+    public void deleteKey(int key) {
+        Node currentNode = head;
+        int index = 0;
+        while (currentNode.next != null) {
+            currentNode = currentNode.next;
+            index++;
+            if (currentNode.data == key) {
+                System.out.println("Key found at index: " + index);
+                deleteAtPosition(index);
+                return;
+            }
+
+        }
+        System.out.println("Key not found!");
+    }
+
+    public void deleteNPosFromLast(int position) {
     }
 
 
