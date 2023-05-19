@@ -90,7 +90,22 @@ public class SinglyLinkedList {
         Node temp = head;
         head = temp.next;
         temp = null;
+        size--;
 
+    }
+
+    public void deleteLast() {
+        Node current = head;
+        if (head == tail) {
+            System.out.println("List is Empty");
+            return;
+        }
+        while (current.next.next != null) {
+            current = current.next;
+        }
+
+        tail = current;
+        tail.next = null;
     }
 
 
