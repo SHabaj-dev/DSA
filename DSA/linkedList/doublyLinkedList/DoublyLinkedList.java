@@ -73,6 +73,44 @@ public class DoublyLinkedList {
         size++;
     }
 
+    protected int getSize() {
+        return size;
+    }
+
+    protected void deleteFirst() {
+        if (head == null) {
+            System.out.println("List is Empty");
+            return;
+        }
+
+        Node temp = head;
+        if (temp.next != null) {
+            temp.next.prev = null;
+        }
+
+        head = temp.next;
+        temp.next = null;
+        size--;
+    }
+
+    protected void deleteLast() {
+        if (head == null) {
+            System.out.println("List is Empty.");
+            return;
+        }
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+
+        if (temp.prev != null) {
+            temp.prev.next = null;
+        } else {
+            head = null;
+        }
+        size--;
+
+    }
 
     private class Node {
         private int data;

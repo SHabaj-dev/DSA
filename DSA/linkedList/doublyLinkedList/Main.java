@@ -15,6 +15,9 @@ public class Main {
             System.out.println("2. Display List");
             System.out.println("3. Insertion At Last");
             System.out.println("4. Insert at Position");
+            System.out.println("5. Size of the List");
+            System.out.println("6. Delete First Node");
+            System.out.println("7. Delete Last Node");
             System.out.println("0. Exit");
             choice = sc.nextInt();
 
@@ -41,6 +44,15 @@ public class Main {
                     System.out.println("Please enter the data.");
                     data = sc.nextInt();
                     list.insertionAtPosition(data, position);
+                }
+                case 5 -> {
+                    System.out.println("Size of the list: " + list.getSize());
+                }
+                case 6 -> {
+                    list.deleteFirst();
+                }
+                case 7 -> {
+                    list.deleteLast();
                 }
             }
         }
