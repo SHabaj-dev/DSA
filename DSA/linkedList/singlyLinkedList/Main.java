@@ -17,6 +17,9 @@ public class Main {
             System.out.println("5. Insertion At Position");
             System.out.println("6. Delete First");
             System.out.println("7. Delete Last");
+            System.out.println("8. Delete At Position");
+            System.out.println("9. Delete a Key");
+            System.out.println("10. Delete Nth from last");
             System.out.println("0. Exit");
             choice = sc.nextInt();
 
@@ -50,6 +53,21 @@ public class Main {
                 }
                 case 7 -> {
                     list.deleteLast();
+                }
+                case 8 -> {
+                    System.out.println("Enter the position :");
+                    position = sc.nextInt();
+                    list.deleteAtPosition(position);
+                }
+                case 9 ->{
+                    System.out.println("Enter the Key :");
+                    int key = sc.nextInt();
+                    list.deleteKey(key);
+                }
+                case 10 ->{
+                    System.out.println("Enter the N Position :");
+                    position = sc.nextInt();
+                    list.deleteNPosFromLast(position);
                 }
                 case 0 -> {
                     System.exit(0);
