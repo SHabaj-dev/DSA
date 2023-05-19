@@ -16,6 +16,7 @@ public class Main {
             System.out.println("4. Size of List");
             System.out.println("5. Insertion At Position");
             System.out.println("6. Delete First");
+            System.out.println("7. Delete Last");
             System.out.println("0. Exit");
             choice = sc.nextInt();
 
@@ -46,6 +47,9 @@ public class Main {
                 }
                 case 6 -> {
                     list.deleteFirst();
+                }
+                case 7 -> {
+                    list.deleteLast();
                 }
                 case 0 -> {
                     System.exit(0);
