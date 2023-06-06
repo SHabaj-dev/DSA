@@ -7,6 +7,10 @@ public class StackUsingLinkedList {
         ll.push(20);
         ll.push(30);
         ll.display();
+
+        System.out.println(ll.peek());
+        ll.display();
+
     }
 }
 
@@ -25,7 +29,33 @@ class LinkedList {
     Node head;
     Node tail;
 
-    public void push(int data) {
+
+    protected int pop(){
+        if(head == null){
+            System.out.println("Stack UnderFLow");
+            return -1;
+        }
+        Node current = head;
+        Node prev = null;
+        while(current.next != null){
+            prev = current;
+            current = current.next;
+        }
+        prev.next = null;
+        return current.data;
+
+    }
+
+    protected int peek(){
+        if(head == null){
+            System.out.println("Stack UnderFlow");
+            return -1;
+        }
+
+        return tail.data;
+    }
+
+    protected void push(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
@@ -38,7 +68,8 @@ class LinkedList {
     }
 
     public void display() {
-        Node current = reverseList();
+        // reverseList();
+        Node current = head;
         if (head == null) {
             System.out.println("Null");
             return;
@@ -51,18 +82,18 @@ class LinkedList {
         System.out.println();
     }
 
-    public Node reverseList(){
-        Node current = head;
-        Node temp = null;
-        Node prev = null;
+    // public void reverseList(){
+    //     Node current = head;
+    //     Node temp = null;
+    //     Node prev = null;
 
-        while(current != null){
-            temp = current.next;
-            current.next = prev;
-            prev = current;
-            current = temp;
-        }
-        
-        return prev;
-    }
+    //     while(current != null){
+    //         temp = current.next;
+    //         current.next = prev;
+    //         prev = current;
+    //         current = temp;
+    //     }
+    //     head = prev;
+
+    // }
 }
