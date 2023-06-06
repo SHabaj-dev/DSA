@@ -8,10 +8,7 @@ public class StackUsingLinkedList {
         ll.push(30);
         ll.display();
 
-        System.out.println(ll.pop());
-        System.out.println(ll.pop());
-        System.out.println(ll.pop());
-        System.out.println(ll.pop());
+        System.out.println(ll.peek());
         ll.display();
 
     }
@@ -39,14 +36,23 @@ class LinkedList {
             return -1;
         }
         Node current = head;
-        Node prev = current;
-        while(current != null){
+        Node prev = null;
+        while(current.next != null){
             prev = current;
             current = current.next;
         }
-        prev = null;
+        prev.next = null;
         return current.data;
 
+    }
+
+    protected int peek(){
+        if(head == null){
+            System.out.println("Stack UnderFlow");
+            return -1;
+        }
+
+        return tail.data;
     }
 
     protected void push(int data) {
