@@ -1,0 +1,18 @@
+
+group{
+    groupid = 1;
+    questionid = 1;
+    title = twoSum;
+    description = lorem ipsum
+}
+
+memebers[
+    
+   {
+    memebersId = 1;
+    groupId = 1;
+    name = shabaj;
+    questionId = 1;
+    isSolved = unsolved;
+    }
+]
